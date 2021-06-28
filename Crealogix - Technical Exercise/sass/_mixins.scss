@@ -1,0 +1,45 @@
+//MIXINS
+
+@mixin container-size {
+    width: 100%;
+    max-width: 95.2rem;
+    min-width: 57.6rem;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin bidi ($prop, $inv-prop, $value) {
+    [dir="ltr"] & {
+        #{$prop}: $value;
+    }
+
+    [dir="rtl"] & {
+        #{$inv-prop}: $value;
+    }
+}
+
+@mixin margin-left ($value) {
+    @include bidi (margin-left, margin-right, $value);
+}
+
+@mixin margin-right ($value) {
+    @include bidi (margin-right, margin-left, $value);
+}
+
+@mixin padding-left ($value) {
+    @include bidi (padding-left, padding-right, $value);
+}
+
+@mixin padding-right ($value) {
+    @include bidi (padding-right, padding-left, $value);
+}
+
+

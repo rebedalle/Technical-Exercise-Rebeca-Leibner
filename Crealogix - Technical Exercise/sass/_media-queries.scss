@@ -1,0 +1,66 @@
+//MEDIA QUERIES
+
+@media screen and (max-width: 906px) {
+    .side-cont{
+        &__panel{
+            height: 15rem;
+
+            &__qaccess {
+                flex-direction: column;
+                height: 6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 804px) {
+    .company__info{
+        flex-direction: column;
+        margin-bottom: 0;
+
+        p {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+        @include padding-right(0);
+    }
+
+    .side-cont {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: space-between;
+        @include margin-left(0);
+
+        &__news {
+            margin: 0;
+            width: 49.5%;
+        }
+
+        &__panel {
+            width: 49.5%;
+        }
+    }
+
+    .footer-section {
+        flex-direction: column;
+
+        .main-navigation {
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .company {
+        text-align: center;
+    }
+}
